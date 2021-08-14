@@ -1,0 +1,50 @@
+:root {
+  --main-color: #282c34;
+}
+
+.GridContainer {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
+
+.Row {
+  border-left: 2px solid var(--main-color);
+  border-right: 2px solid var(--main-color);
+  display: flex;
+  flex-direction: row;
+}
+
+.Row:first-child {
+  border-top: 2px solid var(--main-color);
+}
+
+.Row:last-child {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.Row:nth-child(3),
+.Row:nth-child(6) {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.Tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-color);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Tile:nth-child(3),
+.Tile:nth-child(6) {
+  border-right: 2px solid var(--main-color);
+}
